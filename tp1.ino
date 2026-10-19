@@ -38,8 +38,8 @@ void loop() {
     case 0:
       if (digitalRead(boutonInput) == 1){
         power = 1;
-        char base = 128;
-        char i = 128 + score;
+        unsigned char base = 128;
+        unsigned char i = 128 + score;
         shiftOut(serial, shifting, MSBFIRST, i);
         digitalWrite(latch, HIGH);
         digitalWrite(latch, LOW);
